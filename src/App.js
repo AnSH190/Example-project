@@ -232,7 +232,7 @@ function App() {
                     }
               }
             >
-              Log In
+{Action}
             </div>
           </div>
           {showWarning && (
