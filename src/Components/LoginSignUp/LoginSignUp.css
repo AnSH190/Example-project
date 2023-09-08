@@ -3,19 +3,6 @@ html {
   padding: 0;
 }
 
-.m {
-  background: url("./Components/Assets/7yam85.gif");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover;
-  background-color: #e2ceff;
-  /* background-blend-mode: soft-light; */
-}
-
-.n {
-  background-color: transparent;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -23,6 +10,7 @@ html {
   width: 600px;
   padding-bottom: 60px;
   border: transparent;
+  border: 2px solid black;
   border-radius: 15%;
 }
 
@@ -46,10 +34,6 @@ html {
   height: 6px;
   background-color: #3c009d;
   border-radius: 9px;
-}
-
-.header img {
-  width: 300px;
 }
 
 .inputs {
@@ -84,9 +68,6 @@ html {
   font-size: 19px;
   color: #797979;
 }
-.input input:active {
-  background-color: transparent;
-}
 
 .forgot {
   padding-left: 62px;
@@ -110,7 +91,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 420px;
+  width: 220px;
   height: 59px;
   background-color: #4c00ba;
   color: #fff;
@@ -121,18 +102,6 @@ html {
 }
 
 .gray {
-  color: #000000;
-  background: #645f5f;
-}
-
-.warning {
-  background-color: rgba(255, 0, 0, 0.521);
-  color: white;
-  padding: 10px;
-  text-align: left;
-  margin-top: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 400px;
+  color: #676767;
+  background: #eaeaea;
 }

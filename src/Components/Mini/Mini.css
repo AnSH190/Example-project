@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: 0.5s;
+}
+
+.main {
+  background: rgb(25, 23, 22);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.852) 38%,
+    rgb(23, 21, 22) 100%
+  );
+  /* background-image: url('../Assets/bg-main.png'); */
+  height: 100vh;
+  /* background-repeat: no-repeat;
+    background-size: cover; */
+  width: 100vw;
+  padding-top: 5vh;
+}
+
+.cont {
+  background: rgb(255, 49, 31);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 49, 31, 0.7231267507002801) 38%,
+    rgba(255, 0, 98, 0.432) 100%
+  );
+  height: 93vh;
+  width: 85vw;
+  margin: auto auto;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.profile {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+
+.p {
+  display: flex;
+}
+
+.pfp {
+  height: 28px;
+  width: 28px;
+  border-radius: 40%;
+  margin: 10px;
+  mix-blend-mode: multiply;
+  background-color: black;
+  border: 1px solid gray;
+}
+
+#name {
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 11px;
+  padding-bottom: 5px;
+}
+
+#name:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.log {
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(255, 44, 25, 0.545);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 44, 25, 0.5) 38%,
+    rgba(255, 39, 39, 0.281) 100%
+  );
+  height: 32px;
+  padding-top: 5px;
+  width: 75px;
+  text-align: center;
+  padding-right: 18px;
+  color: rgb(255, 221, 169);
+  margin-block: 6px;
+  margin-inline: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.log:hover {
+  background: rgb(255, 43, 25);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 44, 25) 38%,
+    rgb(255, 39, 39) 100%
+  );
+}
+
+.greetting {
+  color: rgb(37, 25, 25);
+  display: flex;
+  text-align: center;
+  width: 85vw;
+  border-bottom: 1px solid black;
+  margin-block: 5px;
+  justify-content: center;
+}
+
+.greetting .pfp {
+  margin: inherit;
+  padding: inherit;
+  margin-right: 8px;
+}
+
+.menu-items button {
+  background-color: rgba(255, 255, 255, 0.292);
+  width: 180px;
+  height: 45px;
+  margin-block: 20px;
+  border-radius: 15%;
+  text-align: center;
+  font-weight: 700;
+  margin-left: 15px;
+  border: 0.5px solid black;
+  padding-top: 8px;
+}
+
+.menu-items button:hover {
+  /* transform: scale(1.1, 1.1); */
+  background-color: rgba(255, 0, 0, 0.45);
+  cursor: pointer;
+  color: lavenderblush;
+  transition-duration: 0.3s;
+}
+
+.menu-cont {
+  border-right: 2px dotted black;
+  width: 220px;
+}
+
+.profile-sec,
+.payment-cont,
+.exams-cont,
+.results-cont,
+.event-cont,
+.aca-cont,
+.fac-cont {
+  width: 69vw;
+  height: 80vh;
+  background-color: rgba(5, 5, 82, 0);
+  position: absolute;
+  left: 345px;
+  top: 140px;
+  /* border: 2px solid black; */
+}
+
+.profile-details img {
+  height: 100px;
+  width: 100px;
+  margin-left: 190px;
+  margin-block: 10px;
+  mix-blend-mode: multiply;
+  border-radius: 100%;
+}
+
+.profile-details {
+  position: absolute;
+  top: 140px;
+  background-color: rgba(220, 20, 60, 0.297);
+  left: 10px;
+  padding-block: 10px;
+  width: 500px;
+  margin-left: 0;
+  padding: 15px;
+}
+
+.profile-details h2 {
+  font-weight: 700;
+  color: cornsilk;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.profile-details h3 {
+  font-weight: 700;
+  color: cornsilk;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.profile-h {
+  width: 350px;
+  position: absolute;
+  top: 145px;
+  left: 635px;
+}
+
+.h- img {
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: multiply;
+}
+
+.h- h4 {
+  text-align: center;
+  margin-left: 80px;
+}
+
+.h- {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.black button {
+  background: #0f0c29;
+  color: bisque;
+}
+
+.black button:hover {
+  background: #19116b;
+  color: bisque;
+}
+
+.amount {
+  margin-block: 100px;
+  margin-left: 10px;
+  width: 600px;
+  padding-top: 75px;
+  height: 400px;
+  box-shadow: 0px 0px 20px 10px black;
+  /* background-image: url("../Assets/bg-amount.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.amount h2,
+h3 {
+  text-align: center;
+  margin-bottom: 9px;
+  color: rgb(255, 217, 140);
+}
+
+.amount button {
+  height: 45px;
+  width: 120px;
+  left: 242px;
+  color: white;
+  margin-block: 29px;
+  position: absolute;
+  font-weight: 900;
+  font-size: 13px;
+  border-radius: 25px;
+  background: darkcyan;
+  text-align: center;
+  transition-duration: 0.7s;
+}
+
+.amount button:hover {
+  background: rgb(0, 66, 66);
+  cursor: pointer;
+}
+
+.payments- {
+  top: 100px;
+  height: 400px;
+  width: 450px;
+  left: 600px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.payment-gate {
+  width: 250px;
+  height: 50px;
+  margin-inline: auto;
+  background-color: beige;
+  border-radius: 75px;
+  margin-block: 17px;
+}
+
+.payment-gate:hover {
+  background-color: darksalmon;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+/* .exams-cont h2 {
+  text-align: center;
+  margin-top: 35vh;
+} */
+/* .results-cont h2 {
+  text-align: center;
+  margin-top: 35vh;
+} */
+.event-cont h2 {
+  text-align: center;
+  margin-top: 35vh;
+}
+.aca-cont h2 {
+  text-align: center;
+  margin-top: 35vh;
+}
+.fac-cont h2 {
+  text-align: center;
+  margin-top: 35vh;
+}
+
+/* Style for the main "Exams" section */
+
+
+/* Style for individual subsections */
+.exam-schedule,
+.past-exam-results,
+.study-resources,
+.exam-registration,
+.exam-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #0000005c;
+  /* background-color: #fff; */
+  background-color: #ffffff63;
+}
+
+/* Style for content within subsections (placeholders) */
+.exam-schedule p,
+.past-exam-results p,
+.study-resources p,
+.exam-registration p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+/* Example style for buttons within subsections (customize as needed) */
+.exam-schedule button,
+.past-exam-results button,
+.study-resources button,
+.exam-registration button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.exam-schedule button:hover,
+.past-exam-results button:hover,
+.study-resources button:hover,
+.exam-registration button:hover {
+  background-color: #0056b3;
+}
+
+.exam-schedule:hover,
+.past-exam-results:hover,
+.study-resources:hover,
+.exam-registration:hover,
+.exam-section:hover {
+  /* background-color: #ffffff63; */
+  background-color: rgba(224, 224, 224, 0.708);
+  cursor: pointer;
+
+}
+
+.results-cont h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+}
+
+table th {
+  background-color: #ffffff63;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #ffffff63;
+}
+
+table tbody tr:hover {
+  background-color: rgba(224, 224, 224, 0.708);
+  cursor: pointer;
+}
