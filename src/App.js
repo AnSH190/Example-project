@@ -37,6 +37,15 @@ function App() {
     h4: "Ankush Mahesh Vaswani",
     fees: "00",
     profile: a,
+    results: [
+      {subject: "Mathematics", score: 99},
+      {subject: ".NET", score: 78},
+      {subject: "Data Structures", score: 89},
+      {subject: "Operating Systems", score: 74},
+      {subject: "Digital Electronics of Technology", score: 81},
+      {subject: "PHP", score: "N/A"},
+      {subject: "Indian Constitution", score: 90},
+    ],
   };
   const logs2 = {
     e: 2204030101515,
@@ -48,6 +57,15 @@ function App() {
     h4: "second Full Name",
     fees: "22500",
     profile: b,
+    results: [
+      {subject: "Mathematics", score: 75},
+      {subject: ".NET", score: 44},
+      {subject: "Data Structures", score: 78},
+      {subject: "Operating Systems", score: 55},
+      {subject: "Digital Electronics of Technology", score: 91},
+      {subject: "PHP", score: "N/A"},
+      {subject: "Indian Constitution", score: 97},
+    ],
   };
   const logs3 = {
     e: 2204030101516,
@@ -59,6 +77,15 @@ function App() {
     h4: "Third Full Name",
     fees: "1500",
     profile: c,
+    results: [
+      {subject: "Mathematics", score: 47},
+      {subject: ".NET", score: 78},
+      {subject: "Data Structures", score: 69},
+      {subject: "Operating Systems", score: 80},
+      {subject: "Digital Electronics of Technology", score: 41},
+      {subject: "PHP", score: "N/A"},
+      {subject: "Indian Constitution", score: 73},
+    ],
   };
   const logs4 = {
     e: 2204030101517,
@@ -70,6 +97,15 @@ function App() {
     h4: "Fourth Full Name",
     fees: "12500",
     profile: d,
+    results: [
+      {subject: "Mathematics", score: 49},
+      {subject: ".NET", score: 38},
+      {subject: "Data Structures", score: 29},
+      {subject: "Operating Systems", score: 14},
+      {subject: "Digital Electronics of Technology", score: 21},
+      {subject: "PHP", score: "N/A"},
+      {subject: "Indian Constitution", score: 50},
+    ],
   };
   const logs5 = {
     e: 2204030101518,
@@ -81,6 +117,15 @@ function App() {
     h4: "Fifth Full Name",
     fees: "22500",
     profile: e,
+    results: [
+      {subject: "Mathematics", score: 99},
+      {subject: ".NET", score: 98},
+      {subject: "Data Structures", score: 89},
+      {subject: "Operating Systems", score: 94},
+      {subject: "Digital Electronics of Technology", score: 91},
+      {subject: "PHP", score: "N/A"},
+      {subject: "Indian Constitution", score: 100},
+    ],
   };
 
   const [showWarning, setShowWarning] = useState(false);
@@ -151,7 +196,7 @@ function App() {
       action === "Log In" ? ( */}
 
       {action === "Log In" && selectedUser && validateLogin() ? (
-        <Mini selectedUser={selectedUser} />
+        <Mini selectedUser={selectedUser} results={selectedUser.results} />
       ) : (
         <div className="container">
           <div className="header">
@@ -172,6 +217,19 @@ function App() {
                 onChange={(e) => setEnroll(e.target.value)}
               />
             </div>
+            {/* <div class="form__group field">
+              <input
+                type="input"
+                class="form__field"
+                placeholder="Name"
+                required=""
+                value={enroll}
+                onChange={(e) => setEnroll(e.target.value)}
+              />
+              <label for="name" class="form__label">
+                Enrollment
+              </label>
+            </div> */}
             {/* )} */}
             <div className="input">
               <img src={emial_icon} alt="" />
@@ -182,6 +240,19 @@ function App() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+            {/* <div class="form__group field">
+              <input
+                type="input"
+                class="form__field"
+                placeholder="Name"
+                required=""
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <label for="name" class="form__label">
+                E-Mail
+              </label>
+            </div> */}
             <div className="input">
               <img src={password_icon} alt="" />
               <input
@@ -191,6 +262,19 @@ function App() {
                 onChange={(p) => setPass(p.target.value)}
               />
             </div>
+            {/* <div class="form__group field">
+              <input
+                type="password"
+                class="form__field"
+                placeholder="Name"
+                required=""
+                value={pass}
+                onChange={(p) => setPass(p.target.value)}
+              />
+              <label for="name" class="form__label">
+                Password
+              </label>
+            </div> */}
           </div>
           {/* {action === "Sign Up" ? (
             <div></div>

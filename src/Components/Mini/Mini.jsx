@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import "./Mini.css";
 import user from "../Assets/person.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
   faMobile,
   faCalendar,
@@ -11,7 +11,7 @@ import {
   faUniversity,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Mini = ({ selectedUser }) => {
+const Mini = ({selectedUser, results}) => {
   const [action, setAction] = useState("My Profile");
   const [greeting, setGreeting] = useState("");
 
@@ -54,15 +54,15 @@ const Mini = ({ selectedUser }) => {
     }));
   };
 
-  const [results, setResults] = useState([
-    { subject: "Mathematics", score: 95 },
-    { subject: ".NET", score: 88 },
-    { subject: "Data Structures", score: 85 },
-    { subject: "Operating Systems", score: 75 },
-    { subject: "Digital Electronics of Technology", score: 80 },
-    { subject: "PHP", score: 10 },
-    { subject: "Indian Constitution", score: 90 },
-  ]);
+  // const [results, setResults] = useState([
+  //   {subject: "Mathematics", score: 95},
+  //   {subject: ".NET", score: 88},
+  //   {subject: "Data Structures", score: 85},
+  //   {subject: "Operating Systems", score: 75},
+  //   {subject: "Digital Electronics of Technology", score: 80},
+  //   {subject: "PHP", score: 10},
+  //   {subject: "Indian Constitution", score: 90},
+  // ]);
 
   return (
     <div className="main">
@@ -71,7 +71,15 @@ const Mini = ({ selectedUser }) => {
           <div className="p">
             <img src={selectedUser.profile} alt="Profile" className="pfp" />
             {/* <p id="name"> Ankush vaswani </p> */}
-            <p id="name"> {selectedUser.name} </p>
+            <p
+              id="name"
+              onClick={() => {
+                setAction("My Profile");
+              }}
+            >
+              {" "}
+              {selectedUser.name}{" "}
+            </p>
           </div>
           <button
             className="log"
@@ -188,12 +196,12 @@ const Mini = ({ selectedUser }) => {
               <h2>Name:- {selectedUser.name} </h2>
               <h3>Current Semester - 3 </h3>
               {/* <h3>2204030101514</h3> */}
-              <h3> {selectedUser.e} </h3>
+              <h3>{selectedUser.e} </h3>
             </div>
             <div className="profile-h">
               <div className="h-">
                 <img src={user} alt="" />
-                <h4> {selectedUser.h4} </h4>
+                <h4>{selectedUser.h4} </h4>
                 {/* <h4>Ankush Mahesh Vaswani</h4> */}
               </div>
               <div className="h-">
@@ -299,46 +307,6 @@ const Mini = ({ selectedUser }) => {
                 </div>
               )}
             </div>
-
-            <div className="exam-section">
-              <h3 onClick={() => toggleExamSection("results")}>
-                Past Exam Results
-              </h3>
-              {examSections.results && (
-                <div className="exam-content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus non ducimus id facilis fuga cupiditate quidem quia
-                    dicta. Accusamus sequi, ad, itaque labore cupiditate quis ea
-                    placeat, dolores distinctio delectus autem! Porro ab
-                    mollitia iure adipisci, impedit quibusdam eos officiis
-                    sapiente, perspiciatis, pariatur sequi laudantium culpa
-                    error? Iure error omnis ut quia, inventore id, sapiente
-                    nesciunt voluptate aliquam debitis consequatur molestiae
-                    adipisci tempore! Deleniti debitis eveniet ratione quidem
-                    quaerat consectetur tempore natus. Sapiente asperiores
-                    placeat sit, nobis distinctio voluptate eveniet repudiandae
-                    quibusdam molestias quod recusandae delectus voluptatibus.
-                    Officiis repellendus voluptatem iusto. In nobis nemo magnam
-                    esse fugiat quasi a cumque tempora impedit. Corrupti
-                    voluptates dicta omnis. Qui ut quidem ipsa magnam amet nisi
-                    quaerat consequuntur. Iusto non libero ullam, natus alias ad
-                    officiis architecto culpa debitis delectus. Repudiandae, ex
-                    quod impedit harum perspiciatis totam dignissimos qui quasi
-                    obcaecati commodi alias, incidunt dicta similique ad
-                    reprehenderit! Pariatur amet ea eum sunt inventore debitis,
-                    hic, vero ab eaque ad expedita ipsam doloribus quidem
-                    obcaecati minus quae esse, impedit nobis omnis officia?
-                    Accusamus repellat exercitationem reprehenderit ullam,
-                    laborum nostrum soluta, dolorum sapiente nemo neque
-                    voluptate consequuntur? Hic magnam dolorum in, aspernatur
-                    repudiandae pariatur! Ea nemo rerum est voluptatibus veniam
-                    vero, pariatur consectetur saepe?
-                  </p>
-                </div>
-              )}
-            </div>
-
             <div className="exam-section">
               <h3 onClick={() => toggleExamSection("resources")}>
                 Study Resources
@@ -416,6 +384,48 @@ const Mini = ({ selectedUser }) => {
                 </div>
               )}
             </div>
+            <div className="exam-section">
+              <h3
+                onClick={() => {
+                  setAction("Results");
+                }}
+              >
+                Past Exam Results
+              </h3>
+              {examSections.results && (
+                <div className="exam-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus non ducimus id facilis fuga cupiditate quidem quia
+                    dicta. Accusamus sequi, ad, itaque labore cupiditate quis ea
+                    placeat, dolores distinctio delectus autem! Porro ab
+                    mollitia iure adipisci, impedit quibusdam eos officiis
+                    sapiente, perspiciatis, pariatur sequi laudantium culpa
+                    error? Iure error omnis ut quia, inventore id, sapiente
+                    nesciunt voluptate aliquam debitis consequatur molestiae
+                    adipisci tempore! Deleniti debitis eveniet ratione quidem
+                    quaerat consectetur tempore natus. Sapiente asperiores
+                    placeat sit, nobis distinctio voluptate eveniet repudiandae
+                    quibusdam molestias quod recusandae delectus voluptatibus.
+                    Officiis repellendus voluptatem iusto. In nobis nemo magnam
+                    esse fugiat quasi a cumque tempora impedit. Corrupti
+                    voluptates dicta omnis. Qui ut quidem ipsa magnam amet nisi
+                    quaerat consequuntur. Iusto non libero ullam, natus alias ad
+                    officiis architecto culpa debitis delectus. Repudiandae, ex
+                    quod impedit harum perspiciatis totam dignissimos qui quasi
+                    obcaecati commodi alias, incidunt dicta similique ad
+                    reprehenderit! Pariatur amet ea eum sunt inventore debitis,
+                    hic, vero ab eaque ad expedita ipsam doloribus quidem
+                    obcaecati minus quae esse, impedit nobis omnis officia?
+                    Accusamus repellat exercitationem reprehenderit ullam,
+                    laborum nostrum soluta, dolorum sapiente nemo neque
+                    voluptate consequuntur? Hic magnam dolorum in, aspernatur
+                    repudiandae pariatur! Ea nemo rerum est voluptatibus veniam
+                    vero, pariatur consectetur saepe?
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         ) : (
           <div></div>
@@ -424,29 +434,166 @@ const Mini = ({ selectedUser }) => {
         {action === "Results" ? (
           <div className="results-cont">
             <h2>Exam Results</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Subject</th>
-                <th>Score (%)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {results.map((result, index) => (
-                <tr key={index}>
-                  <td>{result.subject}</td>
-                  <td>{result.score}</td>
+            <table>
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Score (%)</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {results.map((result, index) => (
+                  <tr key={index}>
+                    <td>{result.subject}</td>
+                    <td>{result.score}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         ) : (
           <div></div>
         )}
         {action === "Academics" ? (
           <div className="aca-cont">
-            <h2>No Assignements Yet</h2>
+            <h2>Academics</h2>
+            <ul>
+              <li>Current Semester: 3</li>
+              <li>Course: Bachelor of Computer Applications (BCA)</li>
+              <li>University: Silver Oak University</li>
+            </ul>
+            <h3>Assignments</h3>
+            <div className="assignments">
+              {/* <div className="assignment">
+                <input type="checkbox" id="assignment1" />
+                <label htmlFor="assignment1">
+                  Assignment 1: Digital Electronics of Technology
+                </label>
+              </div>
+              <div className="assignment">
+                <input type="checkbox" id="assignment2" />
+                <label htmlFor="assignment2">
+                  Assignment 2: Data Structures
+                </label>
+              </div>
+              <div className="assignment">
+                <input type="checkbox" id="assignment3" />
+                <label htmlFor="assignment3">
+                  Assignment 2: Oprating Systems
+                </label>
+              </div>
+              <div className="assignment">
+                <input type="checkbox" id="assignment4" />
+                <label htmlFor="assignment4">
+                  Assignment 2: Building Applications With .NET(C#)
+                </label>
+              </div> */}
+              <div class="checkbox-wrapper-33">
+                <label class="checkbox">
+                  <input
+                    type="checkbox"
+                    class="checkbox__trigger visuallyhidden"
+                  />
+                  <span class="checkbox__symbol">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1"
+                      viewBox="0 0 28 28"
+                      height="28px"
+                      width="28px"
+                      class="icon-checkbox"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 14l8 7L24 7"></path>
+                    </svg>
+                  </span>
+                  <p class="checkbox__textwrapper">
+                    Assignment 1: Digital Electronics of Technology
+                  </p>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-33">
+                <label class="checkbox">
+                  <input
+                    type="checkbox"
+                    class="checkbox__trigger visuallyhidden"
+                  />
+                  <span class="checkbox__symbol">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1"
+                      viewBox="0 0 28 28"
+                      height="28px"
+                      width="28px"
+                      class="icon-checkbox"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 14l8 7L24 7"></path>
+                    </svg>
+                  </span>
+                  <p class="checkbox__textwrapper">
+                    Assignment 2: Oprating Systems
+                  </p>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-33">
+                <label class="checkbox">
+                  <input
+                    type="checkbox"
+                    class="checkbox__trigger visuallyhidden"
+                  />
+                  <span class="checkbox__symbol">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1"
+                      viewBox="0 0 28 28"
+                      height="28px"
+                      width="28px"
+                      class="icon-checkbox"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 14l8 7L24 7"></path>
+                    </svg>
+                  </span>
+                  <p class="checkbox__textwrapper">
+                    Assignment 2: Data Structures
+                  </p>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-33">
+                <label class="checkbox">
+                  <input
+                    type="checkbox"
+                    class="checkbox__trigger visuallyhidden"
+                  />
+                  <span class="checkbox__symbol">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1"
+                      viewBox="0 0 28 28"
+                      height="28px"
+                      width="28px"
+                      class="icon-checkbox"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 14l8 7L24 7"></path>
+                    </svg>
+                  </span>
+                  <p class="checkbox__textwrapper">
+                    Assignment 2: Building Applications With .NET(C#)
+                  </p>
+                </label>
+              </div>
+              {/* Add more assignments as needed */}
+            </div>
+            <h3>Daily Classwork Updates</h3>
+
+            <ul className="classwork-updates">
+              <li>Chapter 1 of Mathematics</li>
+              <li>Chapter 5 of Physics</li>
+              <li>Chapter 2 of History</li>
+              <li>Chapter 3 of Literature</li>
+            </ul>
           </div>
         ) : (
           <div></div>
