@@ -600,7 +600,36 @@ const Mini = ({selectedUser, results}) => {
         )}
         {action === "Events" ? (
           <div className="event-cont">
-            <h2>Event Gallery</h2>
+            <div>
+              <div class="card">
+                <div>Event 1</div>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div>Event 2</div>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div>Event 3</div>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div>Event 4</div>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div>Event 5</div>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div>Event 6</div>
+              </div>
+            </div>
           </div>
         ) : (
           <div></div>
