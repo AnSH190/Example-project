@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Mini.css";
 import user from "../Assets/person.jpg";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMobile,
   faCalendar,
@@ -11,7 +11,7 @@ import {
   faUniversity,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Mini = ({selectedUser, results}) => {
+const Mini = ({ selectedUser, results }) => {
   const [action, setAction] = useState("My Profile");
   const [greeting, setGreeting] = useState("");
 
@@ -201,7 +201,7 @@ const Mini = ({selectedUser, results}) => {
             <div className="profile-h">
               <div className="h-">
                 <img src={user} alt="" />
-                <h4>{selectedUser.h4} </h4>
+                <h4>{selectedUser.h4}</h4>
                 {/* <h4>Ankush Mahesh Vaswani</h4> */}
               </div>
               <div className="h-">
@@ -589,10 +589,10 @@ const Mini = ({selectedUser, results}) => {
             <h3>Daily Classwork Updates</h3>
 
             <ul className="classwork-updates">
-              <li>Chapter 1 of Mathematics</li>
-              <li>Chapter 5 of Physics</li>
-              <li>Chapter 2 of History</li>
-              <li>Chapter 3 of Literature</li>
+              <li>Chapter 1 of .NET</li>
+              <li>Chapter 5 of Data Structures</li>
+              <li>Chapter 2 of Digital Electronics in Technology</li>
+              <li>Chapter 3 of Oprating System</li>
             </ul>
           </div>
         ) : (
@@ -636,7 +636,83 @@ const Mini = ({selectedUser, results}) => {
         )}
         {action === "Faculty Details" ? (
           <div className="fac-cont">
-            <h2>Facuilty Data Not Found</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name of Faculty</th>
+                  <th>Subject</th>
+                  <th>E-Mail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Faculty 1</td>
+                  <td>Subject 1</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 2</td>
+                  <td>Subject 2</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 3</td>
+                  <td>Subject 3</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 4</td>
+                  <td>Subject 4</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 5</td>
+                  <td>Subject 5</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 6</td>
+                  <td>Subject 6</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 7</td>
+                  <td>Subject 7</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 8</td>
+                  <td>Subject 8</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 9</td>
+                  <td>Subject 9</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 10</td>
+                  <td>Subject 10</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Faculty 11</td>
+                  <td>Subject 11</td>
+                  <td>e@gmail.com</td>
+                </tr>
+                
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         ) : (
           <div></div>

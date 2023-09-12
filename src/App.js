@@ -29,7 +29,7 @@ function App() {
 
   const logs1 = {
     e: 2204030101514,
-    em: "a@gmail.com",
+    em: "ansh@gmail.com",
     p: 4000,
     name: "Ankush Vaswani",
     dob: "04-09-2004",
@@ -48,13 +48,13 @@ function App() {
     ],
   };
   const logs2 = {
-    e: 2204030101515,
-    em: "b@gmail.com",
+    e: 2204030100767,
+    em: "anil@gmail.com",
     p: 5000,
-    name: "John Doe",
-    dob: "01-01-1995",
-    mobile: "1234567890",
-    h4: "second Full Name",
+    name: "Anil Parmar",
+    dob: "10-11-2003",
+    mobile: "9512334557",
+    h4: "Parmar Anil Laxman",
     fees: "22500",
     profile: b,
     results: [
@@ -68,13 +68,13 @@ function App() {
     ],
   };
   const logs3 = {
-    e: 2204030101516,
-    em: "c@gmail.com",
+    e: 2204030100690,
+    em: "dipak@gmail.com",
     p: 6000,
-    name: "Jane Smith",
-    dob: "05-12-2000",
+    name: "Dipak Nath",
+    dob: "20-07-2003",
     mobile: "9876543210",
-    h4: "Third Full Name",
+    h4: "Dipak Nath Bhagwan",
     fees: "1500",
     profile: c,
     results: [
@@ -89,12 +89,12 @@ function App() {
   };
   const logs4 = {
     e: 2204030101517,
-    em: "d@gmail.com",
+    em: "mohitraj@gmail.com",
     p: 7000,
-    name: "David Johnson",
+    name: "Mohit Raj",
     dob: "09-22-1998",
-    mobile: "5558889999",
-    h4: "Fourth Full Name",
+    mobile: "8895656859",
+    h4: "Mohit Anil Raj",
     fees: "12500",
     profile: d,
     results: [
@@ -109,12 +109,12 @@ function App() {
   };
   const logs5 = {
     e: 2204030101518,
-    em: "e@gmail.com",
+    em: "shub@gmail.com",
     p: 8000,
-    name: "Eva Williams",
+    name: "Shubham Rajput",
     dob: "12-05-2002",
     mobile: "7773331111",
-    h4: "Fifth Full Name",
+    h4: "Shubham Rajput Sanjaybhai",
     fees: "22500",
     profile: e,
     results: [

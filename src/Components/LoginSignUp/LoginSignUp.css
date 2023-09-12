@@ -10,7 +10,7 @@ html {
   width: 600px;
   padding-bottom: 60px;
   border: transparent;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 15%;
 }
 
@@ -72,12 +72,14 @@ html {
 .forgot {
   padding-left: 62px;
   margin-top: 27px;
-  color: #797979;
-  font-size: 18px;
+  color: #000000;
+  font-weight: 700;
+  font-size: 16px;
+  
 }
 
 .forgot span {
-  color: #4c00ba;
+  color: #6a00ff;
   cursor: pointer;
 }
 
