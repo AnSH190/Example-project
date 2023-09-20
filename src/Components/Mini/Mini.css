@@ -17,9 +17,9 @@ body {
   ); */
   /* background-image: url('../Assets/bg-main.png'); */
   height: 100vh;
-  background-image: url('../Assets/stacked-steps-haikei\ \(1\).png');
+  background-image: url("../Assets/stacked-steps-haikei\ \(1\).png");
   background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
   width: 100vw;
   padding-top: 5vh;
 }
@@ -92,7 +92,6 @@ body {
   background-color: rgb(0, 0, 0);
   color: white;
   transform: rotateY(10deg) rotateX(10deg) scale(1.05);
-  
 }
 
 .greetting {
@@ -150,7 +149,7 @@ body {
   position: absolute;
   left: 345px;
   top: 140px;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* border: 2px solid rgb(255, 255, 255); */
 }
 
@@ -366,6 +365,58 @@ h3 {
   cursor: pointer;
 }
 
+.exam-section h3 {
+  padding: 12px 20px;
+  margin: 0;
+  color: #333;
+  background-color: #f0f0f0;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exam-section h3:hover {
+  background-color: #e0e0e0;
+}
+
+.exam-content {
+  padding: 20px;
+  color: #1c1b1b;
+  font-size: 16px;
+}
+
+.exam-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.exam-content ul li {
+  margin-bottom: 10px;
+}
+
+/* Add a nice box shadow to the section */
+.exam-section:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resou {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resou p {
+  flex: 1; /* Takes up remaining space on the left */
+  margin-right: 10px; /* Add some spacing between the elements */
+}
+
+.exams-cont {
+  padding-top: 25px;
+}
 .results-cont h2 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -637,6 +688,81 @@ table tbody tr:hover {
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
 }
+.card1 {
+  background-image: url("../Assets/Foundation.webp");
+  width: 300px;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+.card3 {
+  background-image: url("../Assets/celeb.webp");
+  width: 300px;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+.card4 {
+  background-image: url("../Assets/seminars.webp");
+  width: 300px;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+.card5 {
+  background-image: url("../Assets/rang.webp");
+  width: 300px;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+.card6 {
+  background-image: url("../Assets/ras.webp");
+  width: 300px;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
 
 .card:hover {
   transform: rotateY(10deg) rotateX(10deg) scale(1.05);
@@ -678,4 +804,16 @@ table tbody tr:hover {
 .card div {
   position: absolute;
   top: 178px;
+  font-weight: 700;
+}
+
+.re {
+  display: flex;
+  justify-content: space-evenly;
+  /* padding-inline: 12px; */
+  margin-top: 20px;
+}
+
+.re h3 {
+  color: cornsilk;
 }

@@ -37,6 +37,9 @@ function App() {
     h4: "Ankush Mahesh Vaswani",
     fees: "00",
     profile: a,
+    cgpa: 8.45,
+    per: 89,
+    status: "Pass",
     results: [
       {subject: "Mathematics", score: 99},
       {subject: ".NET", score: 78},
@@ -57,6 +60,9 @@ function App() {
     h4: "Parmar Anil Laxman",
     fees: "22500",
     profile: b,
+    cgpa: 7.45,
+    per: 74,
+    status: "Pass",
     results: [
       {subject: "Mathematics", score: 75},
       {subject: ".NET", score: 44},
@@ -77,6 +83,9 @@ function App() {
     h4: "Dipak Nath Bhagwan",
     fees: "1500",
     profile: c,
+    cgpa: 6.45,
+    per: 62,
+    status: "Pass",
     results: [
       {subject: "Mathematics", score: 47},
       {subject: ".NET", score: 78},
@@ -97,6 +106,9 @@ function App() {
     h4: "Mohit Anil Raj",
     fees: "12500",
     profile: d,
+    cgpa: 4.45,
+    per: 32,
+    status: "Fail",
     results: [
       {subject: "Mathematics", score: 49},
       {subject: ".NET", score: 38},
@@ -117,6 +129,9 @@ function App() {
     h4: "Shubham Rajput Sanjaybhai",
     fees: "22500",
     profile: e,
+    cgpa: 9.45,
+    per: 94,
+    status: "Pass",
     results: [
       {subject: "Mathematics", score: 99},
       {subject: ".NET", score: 98},
@@ -316,7 +331,7 @@ function App() {
                     }
               }
             >
-{Action}
+              Log In
             </div>
           </div>
           {showWarning && (

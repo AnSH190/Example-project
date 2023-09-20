@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import "./Mini.css";
 import user from "../Assets/person.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
   faMobile,
   faCalendar,
@@ -9,9 +9,11 @@ import {
   faBook,
   faMale,
   faUniversity,
+  faArrowUpRightFromSquare,
+  faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Mini = ({ selectedUser, results }) => {
+const Mini = ({selectedUser, results}) => {
   const [action, setAction] = useState("My Profile");
   const [greeting, setGreeting] = useState("");
 
@@ -47,13 +49,22 @@ const Mini = ({ selectedUser, results }) => {
   });
 
   // Function to toggle the visibility of a specific exam section
+  // const toggleExamSection = (section) => {
+  //   setExamSections((prevState) => ({
+  //     ...prevState,
+  //     [section]: !prevState[section],
+  //   }));
+  // };
+
   const toggleExamSection = (section) => {
     setExamSections((prevState) => ({
-      ...prevState,
-      [section]: !prevState[section],
+      schedule: section === "schedule" ? !prevState.schedule : false,
+      results: section === "results" ? !prevState.results : false,
+      resources: section === "resources" ? !prevState.resources : false,
+      registration:
+        section === "registration" ? !prevState.registration : false,
     }));
   };
-
   // const [results, setResults] = useState([
   //   {subject: "Mathematics", score: 95},
   //   {subject: ".NET", score: 88},
@@ -270,39 +281,42 @@ const Mini = ({ selectedUser, results }) => {
         {action === "Exams" ? (
           <div className="exams-cont">
             <div className="exam-section">
+              <h3
+                onClick={() => {
+                  setAction("Results");
+                }}
+              >
+                Past Exam Results
+              </h3>
+              {examSections.results && <div className="exam-content"></div>}
+            </div>
+            <div className="exam-section">
               <h3 onClick={() => toggleExamSection("schedule")}>
                 Exam Schedule
               </h3>
               {examSections.schedule && (
                 <div className="exam-content">
+                  <p>Your upcoming exam schedule is as follows:</p>
+                  <ul>
+                    <li>Mathematics: Monday, October 10th, 2023 at 9:00 AM</li>
+                    <li>
+                      .NET Programming: Tuesday, October 11th, 2023 at 10:30 AM
+                    </li>
+                    <li>
+                      Data Structures: Wednesday, October 12th, 2023 at 2:00 PM
+                    </li>
+                    <li>
+                      Operating Systems: Thursday, October 13th, 2023 at 11:15
+                      AM
+                    </li>
+                    <li>
+                      Digital Electronics of Technology: Friday, October 14th,
+                      2023 at 3:45 PM
+                    </li>
+                  </ul>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus non ducimus id facilis fuga cupiditate quidem quia
-                    dicta. Accusamus sequi, ad, itaque labore cupiditate quis ea
-                    placeat, dolores distinctio delectus autem! Porro ab
-                    mollitia iure adipisci, impedit quibusdam eos officiis
-                    sapiente, perspiciatis, pariatur sequi laudantium culpa
-                    error? Iure error omnis ut quia, inventore id, sapiente
-                    nesciunt voluptate aliquam debitis consequatur molestiae
-                    adipisci tempore! Deleniti debitis eveniet ratione quidem
-                    quaerat consectetur tempore natus. Sapiente asperiores
-                    placeat sit, nobis distinctio voluptate eveniet repudiandae
-                    quibusdam molestias quod recusandae delectus voluptatibus.
-                    Officiis repellendus voluptatem iusto. In nobis nemo magnam
-                    esse fugiat quasi a cumque tempora impedit. Corrupti
-                    voluptates dicta omnis. Qui ut quidem ipsa magnam amet nisi
-                    quaerat consequuntur. Iusto non libero ullam, natus alias ad
-                    officiis architecto culpa debitis delectus. Repudiandae, ex
-                    quod impedit harum perspiciatis totam dignissimos qui quasi
-                    obcaecati commodi alias, incidunt dicta similique ad
-                    reprehenderit! Pariatur amet ea eum sunt inventore debitis,
-                    hic, vero ab eaque ad expedita ipsam doloribus quidem
-                    obcaecati minus quae esse, impedit nobis omnis officia?
-                    Accusamus repellat exercitationem reprehenderit ullam,
-                    laborum nostrum soluta, dolorum sapiente nemo neque
-                    voluptate consequuntur? Hic magnam dolorum in, aspernatur
-                    repudiandae pariatur! Ea nemo rerum est voluptatibus veniam
-                    vero, pariatur consectetur saepe?
+                    Make sure to prepare well for your exams and arrive at the
+                    examination venue on time.
                   </p>
                 </div>
               )}
@@ -313,35 +327,20 @@ const Mini = ({ selectedUser, results }) => {
               </h3>
               {examSections.resources && (
                 <div className="exam-content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus non ducimus id facilis fuga cupiditate quidem quia
-                    dicta. Accusamus sequi, ad, itaque labore cupiditate quis ea
-                    placeat, dolores distinctio delectus autem! Porro ab
-                    mollitia iure adipisci, impedit quibusdam eos officiis
-                    sapiente, perspiciatis, pariatur sequi laudantium culpa
-                    error? Iure error omnis ut quia, inventore id, sapiente
-                    nesciunt voluptate aliquam debitis consequatur molestiae
-                    adipisci tempore! Deleniti debitis eveniet ratione quidem
-                    quaerat consectetur tempore natus. Sapiente asperiores
-                    placeat sit, nobis distinctio voluptate eveniet repudiandae
-                    quibusdam molestias quod recusandae delectus voluptatibus.
-                    Officiis repellendus voluptatem iusto. In nobis nemo magnam
-                    esse fugiat quasi a cumque tempora impedit. Corrupti
-                    voluptates dicta omnis. Qui ut quidem ipsa magnam amet nisi
-                    quaerat consequuntur. Iusto non libero ullam, natus alias ad
-                    officiis architecto culpa debitis delectus. Repudiandae, ex
-                    quod impedit harum perspiciatis totam dignissimos qui quasi
-                    obcaecati commodi alias, incidunt dicta similique ad
-                    reprehenderit! Pariatur amet ea eum sunt inventore debitis,
-                    hic, vero ab eaque ad expedita ipsam doloribus quidem
-                    obcaecati minus quae esse, impedit nobis omnis officia?
-                    Accusamus repellat exercitationem reprehenderit ullam,
-                    laborum nostrum soluta, dolorum sapiente nemo neque
-                    voluptate consequuntur? Hic magnam dolorum in, aspernatur
-                    repudiandae pariatur! Ea nemo rerum est voluptatibus veniam
-                    vero, pariatur consectetur saepe?
-                  </p>
+                  <div className="resou">
+                    <p>For study resources kindly click on this icon.</p>
+                    <a
+                      href="https://drive.google.com/drive/folders/1fXJ9ZixN0yqSVXelXDAKZpxhCklnlzsW?usp=drive_link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faUpRightFromSquare}
+                        size="lg"
+                        style={{color: "#000000"}}
+                      />
+                    </a>
+                  </div>
                 </div>
               )}
             </div>
@@ -352,77 +351,20 @@ const Mini = ({ selectedUser, results }) => {
               </h3>
               {examSections.registration && (
                 <div className="exam-content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus non ducimus id facilis fuga cupiditate quidem quia
-                    dicta. Accusamus sequi, ad, itaque labore cupiditate quis ea
-                    placeat, dolores distinctio delectus autem! Porro ab
-                    mollitia iure adipisci, impedit quibusdam eos officiis
-                    sapiente, perspiciatis, pariatur sequi laudantium culpa
-                    error? Iure error omnis ut quia, inventore id, sapiente
-                    nesciunt voluptate aliquam debitis consequatur molestiae
-                    adipisci tempore! Deleniti debitis eveniet ratione quidem
-                    quaerat consectetur tempore natus. Sapiente asperiores
-                    placeat sit, nobis distinctio voluptate eveniet repudiandae
-                    quibusdam molestias quod recusandae delectus voluptatibus.
-                    Officiis repellendus voluptatem iusto. In nobis nemo magnam
-                    esse fugiat quasi a cumque tempora impedit. Corrupti
-                    voluptates dicta omnis. Qui ut quidem ipsa magnam amet nisi
-                    quaerat consequuntur. Iusto non libero ullam, natus alias ad
-                    officiis architecto culpa debitis delectus. Repudiandae, ex
-                    quod impedit harum perspiciatis totam dignissimos qui quasi
-                    obcaecati commodi alias, incidunt dicta similique ad
-                    reprehenderit! Pariatur amet ea eum sunt inventore debitis,
-                    hic, vero ab eaque ad expedita ipsam doloribus quidem
-                    obcaecati minus quae esse, impedit nobis omnis officia?
-                    Accusamus repellat exercitationem reprehenderit ullam,
-                    laborum nostrum soluta, dolorum sapiente nemo neque
-                    voluptate consequuntur? Hic magnam dolorum in, aspernatur
-                    repudiandae pariatur! Ea nemo rerum est voluptatibus veniam
-                    vero, pariatur consectetur saepe?
-                  </p>
-                </div>
-              )}
-            </div>
-            <div className="exam-section">
-              <h3
-                onClick={() => {
-                  setAction("Results");
-                }}
-              >
-                Past Exam Results
-              </h3>
-              {examSections.results && (
-                <div className="exam-content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus non ducimus id facilis fuga cupiditate quidem quia
-                    dicta. Accusamus sequi, ad, itaque labore cupiditate quis ea
-                    placeat, dolores distinctio delectus autem! Porro ab
-                    mollitia iure adipisci, impedit quibusdam eos officiis
-                    sapiente, perspiciatis, pariatur sequi laudantium culpa
-                    error? Iure error omnis ut quia, inventore id, sapiente
-                    nesciunt voluptate aliquam debitis consequatur molestiae
-                    adipisci tempore! Deleniti debitis eveniet ratione quidem
-                    quaerat consectetur tempore natus. Sapiente asperiores
-                    placeat sit, nobis distinctio voluptate eveniet repudiandae
-                    quibusdam molestias quod recusandae delectus voluptatibus.
-                    Officiis repellendus voluptatem iusto. In nobis nemo magnam
-                    esse fugiat quasi a cumque tempora impedit. Corrupti
-                    voluptates dicta omnis. Qui ut quidem ipsa magnam amet nisi
-                    quaerat consequuntur. Iusto non libero ullam, natus alias ad
-                    officiis architecto culpa debitis delectus. Repudiandae, ex
-                    quod impedit harum perspiciatis totam dignissimos qui quasi
-                    obcaecati commodi alias, incidunt dicta similique ad
-                    reprehenderit! Pariatur amet ea eum sunt inventore debitis,
-                    hic, vero ab eaque ad expedita ipsam doloribus quidem
-                    obcaecati minus quae esse, impedit nobis omnis officia?
-                    Accusamus repellat exercitationem reprehenderit ullam,
-                    laborum nostrum soluta, dolorum sapiente nemo neque
-                    voluptate consequuntur? Hic magnam dolorum in, aspernatur
-                    repudiandae pariatur! Ea nemo rerum est voluptatibus veniam
-                    vero, pariatur consectetur saepe?
-                  </p>
+                  <div className="resou">
+                    <p>For registration fill up the form.</p>
+                    <a
+                      href="https://forms.gle/Y2rd3nVJi2zS5MVF"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faUpRightFromSquare}
+                        size="lg"
+                        style={{color: "#000000"}}
+                      />
+                    </a>
+                  </div>
                 </div>
               )}
             </div>
@@ -450,6 +392,11 @@ const Mini = ({ selectedUser, results }) => {
                 ))}
               </tbody>
             </table>
+            <div className="re">
+              <h3>CGPA :- {selectedUser.cgpa} </h3>
+              <h3>Percentage :- {selectedUser.per}% </h3>
+              <h3> {selectedUser.status} </h3>
+            </div>
           </div>
         ) : (
           <div></div>
@@ -601,34 +548,70 @@ const Mini = ({ selectedUser, results }) => {
         {action === "Events" ? (
           <div className="event-cont">
             <div>
-              <div class="card">
-                <div>Event 1</div>
-              </div>
+              <a
+                href="https://silveroakuni.ac.in/foundation-day"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card card1">
+                  <div>Foundation Day</div>
+                </div>
+              </a>
             </div>
             <div>
-              <div class="card">
-                <div>Event 2</div>
-              </div>
+              <a
+                href="https://silveroakuni.ac.in/junoon-2023-gallery"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card card2">
+                  <div>Junnon 2023</div>
+                </div>
+              </a>
             </div>
             <div>
-              <div class="card">
-                <div>Event 3</div>
-              </div>
+              <a
+                href="https://silveroakuni.ac.in/celebrity-gallery"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card card3">
+                  <div>Celebrities At SOU</div>
+                </div>
+              </a>
             </div>
             <div>
-              <div class="card">
-                <div>Event 4</div>
-              </div>
+              <a
+                href="https://silveroakuni.ac.in/seminar-gallery"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card card4">
+                  <div>Seminars</div>
+                </div>
+              </a>
             </div>
             <div>
-              <div class="card">
-                <div>Event 5</div>
-              </div>
+              <a
+                href="https://silveroakuni.ac.in/rangmanch"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card card5">
+                  <div>Rangmanch 2022</div>
+                </div>
+              </a>
             </div>
             <div>
-              <div class="card">
-                <div>Event 6</div>
-              </div>
+              <a
+                href="https://silveroakuni.ac.in/rass-rasiya-gallery"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card card6">
+                  <div>Rass Rasiya 2022</div>
+                </div>
+              </a>
             </div>
           </div>
         ) : (
@@ -651,61 +634,61 @@ const Mini = ({ selectedUser, results }) => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Faculty 1</td>
-                  <td>Subject 1</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Grishma</td>
+                  <td>Data Structures</td>
+                  <td>grishma@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 2</td>
-                  <td>Subject 2</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Mukti</td>
+                  <td>Data Structures</td>
+                  <td>mukti@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 3</td>
-                  <td>Subject 3</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Nitwik</td>
+                  <td>Data Structures</td>
+                  <td>nitwik@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 4</td>
-                  <td>Subject 4</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Vishal P</td>
+                  <td>ASP.NET</td>
+                  <td>vishalp@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 5</td>
-                  <td>Subject 5</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Vishal</td>
+                  <td>PHP</td>
+                  <td>vishal@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 6</td>
-                  <td>Subject 6</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Deep</td>
+                  <td>ASP.NET</td>
+                  <td>deep@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 7</td>
-                  <td>Subject 7</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Lokesh Kumar</td>
+                  <td>Operating System</td>
+                  <td>lokesh@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 8</td>
-                  <td>Subject 8</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Alaap Jagdale </td>
+                  <td>DET</td>
+                  <td>alaap@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 9</td>
-                  <td>Subject 9</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Priyakant</td>
+                  <td>Data Structures</td>
+                  <td>priyakant@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 10</td>
-                  <td>Subject 10</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Dipika</td>
+                  <td>PHP</td>
+                  <td>dipika@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Faculty 11</td>
-                  <td>Subject 11</td>
-                  <td>e@gmail.com</td>
+                  <td>Proff. Akash</td>
+                  <td>ASP.NET</td>
+                  <td>akash@gmail.com</td>
                 </tr>
-                
+
                 <tr>
                   <td></td>
                   <td></td>
