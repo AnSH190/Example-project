@@ -634,57 +634,57 @@ const Mini = ({selectedUser, results}) => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Proff. Grishma</td>
+                  <td>Prof. Grishma</td>
                   <td>Data Structures</td>
                   <td>grishma@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Mukti</td>
+                  <td>Prof. Mukti</td>
                   <td>Data Structures</td>
                   <td>mukti@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Nitwik</td>
+                  <td>Prof. Nitwik</td>
                   <td>Data Structures</td>
                   <td>nitwik@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Vishal P</td>
+                  <td>Prof. Vishal P</td>
                   <td>ASP.NET</td>
                   <td>vishalp@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Vishal</td>
+                  <td>Prof. Vishal</td>
                   <td>PHP</td>
                   <td>vishal@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Deep</td>
+                  <td>Prof. Deep</td>
                   <td>ASP.NET</td>
                   <td>deep@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Lokesh Kumar</td>
+                  <td>Prof. Lokesh Kumar</td>
                   <td>Operating System</td>
                   <td>lokesh@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Alaap Jagdale </td>
+                  <td>Prof. Alaap Jagdale </td>
                   <td>DET</td>
                   <td>alaap@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Priyakant</td>
+                  <td>Prof. Priyakant</td>
                   <td>Data Structures</td>
                   <td>priyakant@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Dipika</td>
+                  <td>Prof. Dipika</td>
                   <td>PHP</td>
                   <td>dipika@gmail.com</td>
                 </tr>
                 <tr>
-                  <td>Proff. Akash</td>
+                  <td>Prof. Akash</td>
                   <td>ASP.NET</td>
                   <td>akash@gmail.com</td>
                 </tr>
