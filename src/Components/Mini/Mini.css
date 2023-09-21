@@ -92,8 +92,12 @@ body {
   background-color: rgb(0, 0, 0);
   color: white;
   transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  border-radius: 10px;
 }
 
+.log:active {
+  background-color: #000000;
+}
 .greetting {
   color: rgb(37, 25, 25);
   display: flex;
@@ -671,6 +675,7 @@ table tbody tr:hover {
     1fr
   ); /* This will create 3 columns of equal width */
   /* Add some gap between the cards */
+  overflow: visible;
 }
 
 .card {

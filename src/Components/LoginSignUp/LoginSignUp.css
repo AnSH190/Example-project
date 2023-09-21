@@ -12,6 +12,8 @@ html {
   border: transparent;
   /* border: 2px solid black; */
   border-radius: 15%;
+  margin-block: auto;
+  margin-left: 80px;
 }
 
 .header {

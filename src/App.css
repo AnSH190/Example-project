@@ -4,11 +4,12 @@ html {
 }
 
 .m {
-  background: url("./Components/Assets/7yam85.gif");
+  background: url("./Components/Assets/7zvsyg.gif");
+  /* background: url("./Components/Assets/7yam85.gif"); */
   background-repeat: no-repeat;
   background-position: right;
-  background-size: cover;
-  background-color: #e2ceff;
+  background-size: contain;
+  background-color: #ffffff;
   /* background-blend-mode: soft-light; */
 }
 
