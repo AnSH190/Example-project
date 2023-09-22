@@ -202,3 +202,21 @@ html {
   right: 0;
   width: 400px;
 }
+
+
+@media screen and (max-width:800px) {
+  .header {
+    width: auto;
+    height: auto;
+  }
+
+  .input {
+    width: 100vw;
+  }
+
+  .warning {
+    text-align: right;
+    left: 280px;
+    width: 200px;
+  }
+}
