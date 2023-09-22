@@ -143,6 +143,13 @@ function App() {
     ],
   };
 
+  const handleReset = () => {
+    // Clear the values of enrollment, email, and password fields
+    setEnroll("");
+    setEmail("");
+    setPass("");
+  };
+
   const [showWarning, setShowWarning] = useState(false);
   const loginData = [logs1, logs2, logs3, logs4, logs5];
 
@@ -192,6 +199,7 @@ function App() {
     }
     return false;
   };
+  
 
   useEffect(() => {
     // When the user logs in, find and set the selectedUser
@@ -210,7 +218,7 @@ function App() {
       logs.em == email &&
       action === "Log In" ? ( */}
 
-      {action === "Log In" && selectedUser && validateLogin() ? (
+      {action === "Log In" && selectedUser && validateLogin() ? ( 
         <Mini selectedUser={selectedUser} results={selectedUser.results} />
       ) : (
         <div className="container">
@@ -296,6 +304,7 @@ function App() {
           ) : ( */}
           <div className="forgot">
             Forgot Password <span>Click Here</span>
+
           </div>
           {/* )} */}
           {/* <div>{enroll}</div>
@@ -303,14 +312,9 @@ function App() {
           <div> {pass} </div> */}
           {/* {action === "Sign Up" ? <div>Enter Corrct info </div> : <div></div>} */}
           <div className="submit-con">
-            {/* <div
-              className={action === "Log In" ? "submit gray" : "submit gray"}
-              onClick={() => {
-                setAction("Sign Up");
-              }}
-            >
-              Sign Up
-            </div> */}
+            
+          
+            
             <div
               // className={action === "Sign Up" ? "submit gray" : "submit"}
               className={
@@ -333,6 +337,9 @@ function App() {
             >
               Log In
             </div>
+            <button type="reset" className="submit" onClick={handleReset}>
+          Reset
+        </button>
           </div>
           {showWarning && (
             <div className={`warning ${showWarning ? "visible" : "hidden"}`}>
